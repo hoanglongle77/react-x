@@ -27,6 +27,7 @@ jobs:
 
       - name: Merge to Dev
         uses: "peter-evans/create-pull-request@v5"
+        if: ${{ success() }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: dev
